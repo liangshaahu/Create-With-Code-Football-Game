@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class RotateCamera : MonoBehaviour
 {
-    float rotateSpeed = 10.0f;
+    public float rotationSpeed;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,6 @@ public class RotateCamera : MonoBehaviour
     void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
-        transform.Rotate(Vector3.up, horizontalInput * rotateSpeed * Time.deltaTime);
+        transform.Rotate(Vector3.up, horizontalInput * rotationSpeed * Time.deltaTime);
     }
 }
